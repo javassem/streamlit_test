@@ -12,14 +12,12 @@
 # <1>
 import streamlit as st
 
-from langchain.chat_models import init_chat_model
+from langchain_openai import ChatOpenAI
 #from dotenv import load_dotenv
 #load_dotenv() # .env  파일을 읽어서 키값 가져옴
 
 # ChatOpenAI 초기화
-llm = init_chat_model("gpt-4o-mini", model_provider="openai")
-# llm = init_chat_model("gpt-4o-mini", model_provider="openai", temperature=0.1, max_tokens=5 )
-
+llm = ChatOpenAI(model="gpt-4o-mini")
 # answer = llm.invoke('hello')
 # print(answer)
 
